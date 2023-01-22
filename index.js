@@ -40,6 +40,10 @@ mongoose.connect(DB, {
 //     console.log(err)
 // })
 
+server.prependListener("request", (req, res) => {
+   res.setHeader("Access-Control-Allow-Origin", "*");
+});
+
 const server = app.listen(process.env.PORT, () => {
     console.log(`Server started on PORT ${process.env.PORT}`)
 });
