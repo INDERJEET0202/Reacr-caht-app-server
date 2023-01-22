@@ -57,7 +57,7 @@ app.get('/', (req, res) => {
 
 const io = socket(server, {
     cors: {
-        origin: "https://chatz-xyz.netlify.app/",
+        origin: "https://chatz-xyz.netlify.app",
         credentials: true,
     },
 });
