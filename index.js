@@ -12,7 +12,7 @@ const DB = process.env.DB;
 
 const socket = require("socket.io");
 
-app.use(cors({origin: 'https://chatz-xyz.netlify.app'}));
+app.use(cors({ origin: 'https://chatz-xyz.netlify.app' }));
 app.use(express.json())
 
 app.use("/api/auth", userRoutes);
@@ -57,7 +57,7 @@ app.get('/', (req, res) => {
 
 const io = socket(server, {
     cors: {
-        origin: "https://chatz-xyz.netlify.app",
+        origin: "chat-and-react.vercel.app",
         credentials: true,
     },
 });
